@@ -12,7 +12,7 @@ const DERECHA = 13;
 /* CONFIGURACION DEL JUEGO -- INICIO*/
 const NUMERO_FRUTILLAS = 55;            //Numero de frutillas que se crearán en el tablero (cada frutilla que se coma se regenera aleatoriamente en una posicion del tablero)
 const DIM = 40;                         //Representa el ancho en casillas del tablero, p ej si DIM = 20 el tablero sera de 20x20 es decir 400 casillas POR DEFECTO=40
-const TAM_SERPTIENTE = 8;               //Tamaño inicial de la serpiente
+const TAM_SERPTIENTE = 8;                //Tamaño inicial de la serpiente
 const VELOCIDAD = 50;                  //velocidad de la serpiente, cuanto más pequeño más pequeño mas rapido, son los milisegundos que tarda en moverse la serpiente, valores mayores de 10 
 /* CONFIGURACION DEL JUEGO -- INICIO*/
 class tablero {
