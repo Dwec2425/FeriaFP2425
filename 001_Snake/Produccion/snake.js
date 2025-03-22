@@ -20,8 +20,11 @@ class tablero {
         const tableroTemp = document.createElement("div");
         tableroTemp.classList.add("tablero");
         document.getElementById("cuerpo").appendChild(tableroTemp);
+
+        
         //casillas
-        const tamanoCasilla = Math.floor((document.getElementById("cuerpo").clientHeight) / DIM);
+        let tamanoCasilla = Math.floor((document.getElementById("contenedor_gral").clientWidth) / DIM);
+        tamanoCasilla*=0.5;
         tableroTemp.style.gridTemplateColumns = `repeat(${DIM}, ${tamanoCasilla}px)`;
         tableroTemp.style.gridTemplateRows = `repeat(${DIM},  ${tamanoCasilla}px)`;
 
