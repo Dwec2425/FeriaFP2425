@@ -1,0 +1,130 @@
+* {
+    font-family: "verdana", "sans-serif";
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: lightgrey;
+}
+
+header,
+footer {
+    text-align: center;
+    background-color: lightcoral;
+
+}
+
+header {
+    height: 5%;
+    border-radius: 25px 25px 0 0;
+}
+
+footer {
+    height: 2%;
+    border-radius: 0 0 25px 25px;
+}
+
+main {
+    height: 93%;
+}
+
+#contenedor_ppal {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin: 10px auto;
+    width: 80%;
+    height: 95vh;
+    background-color: lightblue;
+    border: solid 1px black;
+    border-radius: 25px;
+    box-shadow: 10px 10px 30px 0 black;
+}
+
+#contenido {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 100%;
+}
+
+.izda {
+    width: 75%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    border:1px solid black;
+}
+.dcha {
+    width: 25%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    border:1px solid black;
+}
+
+.formulario{
+    margin:3em;
+    border:dotted 2px lightcyan;
+    width:80%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+
+.formulario label,input{
+    font-size: 20px;
+    color:tomato;
+    text-align: center;
+    display: inline-block;
+    margin:1em 4em;
+    
+}
+.formulario input[type="button"]{
+    font-size: 20px;
+    color:black;
+    text-align: center;
+    margin:3em 9em;
+    
+}
+
+.formulario .numjugbad{
+    visibility:hidden;
+    font-size: 12px;
+    color:red;
+    margin:0;
+}
+
+#info_game p{
+    margin:20px;
+}
+
+.tablero{
+    width: 300px;
+    height: 300px;
+    margin:auto;
+    border:solid 2px red;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto auto auto;
+}
+
+.tablero .casilla{
+    border:solid 2px white;
+    align-items: center;
+    justify-items: center;
+}
+.p1{
+    border:5px solid red;
+    border-radius: 50%;
+    background-color: rgb(230, 3, 3);
+}
+.p2{
+    background-color: rgb(43, 46, 226);
+}
