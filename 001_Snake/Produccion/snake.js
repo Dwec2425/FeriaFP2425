@@ -35,6 +35,9 @@ class tablero {
                 //console.log(`casilla[${i}][${j}] creada`);
             }
         }
+        this.tableroHTML = tableroTemp;
+        console.log("tablero creado");
+        
 
     }
     muestraTipo() {
@@ -88,9 +91,9 @@ class tablero_serpiente extends tablero {
                 }
             }
         }
+  
 
-
-        for (let i = 0; i < NUMERO_FRUTILLAS; i++) {
+        for(let i=0;i<NUMERO_FRUTILLAS;i++){
             this.generafrutilla();
 
         }
@@ -103,7 +106,7 @@ class tablero_serpiente extends tablero {
         do {
             frutillaI = Math.floor(Math.random() * ((DIM - 2) - 1 + 1)) + 1;
             frutillaJ = Math.floor(Math.random() * ((DIM - 2) - 1 + 1)) + 1;
-
+           
         } while (this.casillas[frutillaI][frutillaJ].tipo != FONDO)
         this.casillas[frutillaI][frutillaJ].casillaElement.className = "casilla"; //quito todas las clases menos casilla
         this.casillas[frutillaI][frutillaJ].casillaElement.classList.add("frutilla"); //quito todas las clases menos casilla
@@ -131,7 +134,7 @@ class serpiente {
         this.tablero = tablero; //referencia al tablero donde jugara la serpiente
         this.game = game; //referencia al juego donde se esta jugando
         this.tamano = tamano_inicial;
-        this.direccionAnterior = null;
+        this.direccionAnterior=null;
         this.cuerpo = new Array();
 
         const cabeza = new cabeza_serpiente
@@ -154,9 +157,9 @@ class serpiente {
 
     }
 
-    mueve(direccionFutura, direccionActual) {
+    mueve(direccionFutura,direccionActual) {
         let cambiarDireccion = false;
-
+        
         switch (direccionFutura) {
             case ARRIBA:
                 switch (this.tablero.casillas[this.cuerpo[0].posicionI - 1][this.cuerpo[0].posicionJ].tipo) {
@@ -169,8 +172,8 @@ class serpiente {
                         this.nuevoSegmento()
                         break;
                     case SERPIENTE:
-
-
+                    
+                        
                         break;
                     case BORDE:
                         this.cuerpo[0].posicionFuturaI = DIM - 2; //entra por abajo, DIM-1 es el borde de abajo
@@ -186,11 +189,11 @@ class serpiente {
                     this.actualizaSerpiente();
 
 
-                } else {
+                }else{
                     //donothing
 
                 }
-                this.game.direccionActual=ARRIBA;
+
                 break;
             case ABAJO:
                 switch (this.tablero.casillas[this.cuerpo[0].posicionI + 1][this.cuerpo[0].posicionJ].tipo) {
@@ -220,7 +223,6 @@ class serpiente {
 
 
                 }
-                this.game.direccionActual=ABAJO;
                 break;
             case IZQUIERDA:
                 switch (this.tablero.casillas[this.cuerpo[0].posicionI][this.cuerpo[0].posicionJ - 1].tipo) {
@@ -250,7 +252,6 @@ class serpiente {
 
 
                 }
-                this.game.direccionActual=IZQUIERDA;
                 break;
             case DERECHA:
                 switch (this.tablero.casillas[this.cuerpo[0].posicionI][this.cuerpo[0].posicionJ + 1].tipo) {
@@ -280,30 +281,28 @@ class serpiente {
 
 
                 }
-                this.game.direccionActual=DERECHA;
-
                 break;
 
-        
-               
+
 
         }
+
     }
-    parar() {
+    parar(){
         console.log(`la serpiente se para`);
-        if (true) {
+        if(true){
             //verificar si quieres finalizar el juego
             this.game.finalizar();
         }
     }
     nuevoSegmento() {
         console.log(`NUEVO SEGMENTO`);
-
+    
         this.tamano++;
-
+      
         this.cuerpo.push(new cuerpo_serpiente(this.cuerpo[this.tamano - 2].posicionI, this.cuerpo[this.tamano - 2].posicionJ)); //creo otro elemento y lo solapo exactamente en el ultimo elemento que es tam-2 ya que he incrementado uno, no hay problema con que los 2 ultimos elementos sean "el mismo" ya que ahora al actualizar se mueven todos copiando la direccion del anteiror de manera que el ultimo copiara la direccion del penultimo que en este caso es la misma y no se movera, actualizandose corerctamente. Realmente daria igual donde colocara el semgento siempre que no fuera muro o frutilla
         for (let i = 0; i < this.tamano; i++) {
-
+      
         }
 
     }
@@ -372,17 +371,17 @@ class cuerpo_serpiente extends segmento_serpiente {
     }
 }
 
-class game {
-    constructor() {
+class game{
+    constructor(){
         this.tablero = new tablero_serpiente();
         this.serpiente = new serpiente(TAM_SERPTIENTE, this.tablero, this); //le paso this, para que desde serpiente pueda hacer this.game.finalizar() para llamar a finalizar el jeugo
-
-        this.direccionActual = ARRIBA; //inicio en algun valor, no es relevante, pero q no sea null
+        
+        this.direccionActual= ARRIBA; //inicio en algun valor, no es relevante, pero q no sea null
         this.siguiente_direccion = null;
         this.intervalo = null; //intervalo UNICO para actualizar la serpiente
         this.derrota = false;
     }
-    empezar(direccion) {
+    empezar(direccion){
         this.direccionActual = direccion;
         this.siguiente_direccion = direccion;
         if (!this.intervalo) {
@@ -390,47 +389,47 @@ class game {
                 //console.log(`vamos a mover la serpiente pero ANTES DE MOVER MIRA ESTO`)
                 //console.log(`direccion actual serpiente es ${this.direccionActual}`)
                 //console.log(`direccion futura serpiente es ${this.siguiente_direccion}`)
-                this.serpiente.mueve(this.siguiente_direccion, this.direccionActual);
-                if (this.derrota) {
+                this.serpiente.mueve(this.siguiente_direccion,this.direccionActual);
+                if(this.derrota){
                     console.log("NO DEBERIA VERSE ESTO, deberia haberse liberado el intervalPRUEBA")
                 }
-
+                
             }, VELOCIDAD);
-
+            
         }
 
     }
 
-    cambiarDireccionSerpiente(nuevaDireccion) {
-        if (this.direccionActual != this.siguiente_direccion) {
-            this.direccionActual = this.siguiente_direccion;
-            this.siguiente_direccion = nuevaDireccion;
+    cambiarDireccionSerpiente(nuevaDireccion){
+        if(this.direccionActual!=this.siguiente_direccion){
+            this.direccionActual=this.siguiente_direccion;
+            this.siguiente_direccion=nuevaDireccion;
         }
         else {
-            this.direccionActual = this.siguiente_direccion;
-            this.siguiente_direccion = nuevaDireccion;
+             this.direccionActual=this.siguiente_direccion;
+            this.siguiente_direccion=nuevaDireccion;
             //donothing, se supone que si las direcciones son iguales no debe actualizar nada
         }
     }
-    finalizar() {
-
+    finalizar(){
+        
         this.derrota = true;
-
-
+       
+       
         setTimeout(() => {
             alert("FIN DEL JUEGO");
         }, 500);
     }
 
-    pausar(direccion) {
+    pausar(direccion){
         clearInterval(this.intervalo);
         this.intervalo = null; //intervalo debe ser null para que empezar lo setee
-        if (confirm("juego pausado\n¿Quieres continuar? pulsa aceptar para continuar y cancelar para finalizar")) {
+        if(confirm("juego pausado\n¿Quieres continuar? pulsa aceptar para continuar y cancelar para finalizar")){
             this.empezar(direccion);
             console.log("deberia emepezar")
         }
-        else { this.finalizar(); }
-
+        else{this.finalizar();}
+        
     }
 }
 
@@ -448,18 +447,18 @@ const juegoSerpiente = new game();
 juegoSerpiente.empezar(ABAJO);
 
 document.body.addEventListener("keydown", (event) => {
-    //console.log(`tecla presionada >>>> ${event.key}`);
+    //event.preventDefault(); // Evita que la página haga scroll con las teclas
     switch (event.key) {
         case "ArrowUp":
-            //      console.log("tecla arriba presioanada");
+      //      console.log("tecla arriba presioanada");
             juegoSerpiente.cambiarDireccionSerpiente(ARRIBA);
             break;
         case "ArrowDown":
-            //    console.log("tecla abajo presioanada");
+        //    console.log("tecla abajo presioanada");
             juegoSerpiente.cambiarDireccionSerpiente(ABAJO);
             break;
         case "ArrowLeft":
-            //  console.log("tecla izda presioanada");
+          //  console.log("tecla izda presioanada");
             juegoSerpiente.cambiarDireccionSerpiente(IZQUIERDA);
             break;
         case "ArrowRight":
@@ -487,22 +486,24 @@ document.body.addEventListener("keydown", (event) => {
 
 
 
-});
+})
 
 document.body.addEventListener("click", (event) => {
-    if (event.clientX > document.body.clientWidth / 2) {
-        //click de la mitad hacia la derecha, vamos a girar 90º a la derecha
-        console.log(juegoSerpiente);
-        console.log(juegoSerpiente.direccionActual);
-        if(juegoSerpiente.direccionActual==DERECHA)juegoSerpiente.cambiarDireccionSerpiente(ABAJO);
-        if(juegoSerpiente.direccionActual==ABAJO)juegoSerpiente.cambiarDireccionSerpiente(IZQUIERDA);
-        if(juegoSerpiente.direccionActual==IZQUIERDA)juegoSerpiente.cambiarDireccionSerpiente(ARRIBA);
-        if(juegoSerpiente.direccionActual==ARRIBA)juegoSerpiente.cambiarDireccionSerpiente(DERECHA);
-    } else {
-        if(juegoSerpiente.direccionActual==DERECHA)juegoSerpiente.cambiarDireccionSerpiente(ARRIBA);
-        if(juegoSerpiente.direccionActual==ARRIBA)juegoSerpiente.cambiarDireccionSerpiente(IZQUIERDA);
-        if(juegoSerpiente.direccionActual==IZQUIERDA)juegoSerpiente.cambiarDireccionSerpiente(ABAJO);
-        if(juegoSerpiente.direccionActual==ABAJO)juegoSerpiente.cambiarDireccionSerpiente(DERECHA);
-        console.log("izda");
+    console.log(`coordenadas del click x = ${event.clientX} y = ${event.clientY}`)
+    const dimensiones_tablero= juegoSerpiente.tablero.tableroHTML.getBoundingClientRect();
+    console.log(`coordenadas del tablero borde superior < ${Math.floor(dimensiones_tablero.top)}`)
+    console.log(`coordenadas del tablero borde inferior > ${Math.floor(dimensiones_tablero.bottom)}`)
+    console.log(`coordenadas del tablero borde derecha > ${Math.floor(dimensiones_tablero.right)}`)
+    console.log(`coordenadas del tablero borde izda < ${Math.floor(dimensiones_tablero.left)}`)
+    if(event.clientX > Math.floor(dimensiones_tablero.right) && event.clientY>Math.floor(dimensiones_tablero.top)&& event.clientY<Math.floor(dimensiones_tablero.bottom)){
+        juegoSerpiente.cambiarDireccionSerpiente(DERECHA);
+    }else if(event.clientX < Math.floor(dimensiones_tablero.left) && event.clientY>Math.floor(dimensiones_tablero.top)&& event.clientY<Math.floor(dimensiones_tablero.bottom)){
+        juegoSerpiente.cambiarDireccionSerpiente(IZQUIERDA);
     }
+    if(event.clientY < Math.floor(dimensiones_tablero.top) && event.clientX<Math.floor(dimensiones_tablero.right)&& event.clientX>Math.floor(dimensiones_tablero.left)){
+        juegoSerpiente.cambiarDireccionSerpiente(ARRIBA);
+    }else if(event.clientY > Math.floor(dimensiones_tablero.bottom) && event.clientX<Math.floor(dimensiones_tablero.right)&& event.clientX>Math.floor(dimensiones_tablero.left)){
+        juegoSerpiente.cambiarDireccionSerpiente(ABAJO);
+    }
+
 });
