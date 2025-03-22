@@ -128,3 +128,24 @@ main {
 .p2{
     background-color: rgb(43, 46, 226);
 }
+
+.victoria{
+    position:absolute;
+    top:0;
+    left:0;
+    margin:3em;
+    display:none;
+    width: 90%;
+    height: 90%;
+    opacity: 70%;
+    background-color: black;
+    border:5px solid white;
+    border-radius:50px;
+    
+}
+.victoria p{
+    color:white;
+    text-align: center;
+    margin:10em;
+    font-size:40px;
+}

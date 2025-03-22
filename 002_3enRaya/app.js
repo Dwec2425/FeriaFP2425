@@ -123,7 +123,20 @@ class game {
                 info_parrafo.innerHTML += `<br><br>turno de player 2`;
                 this.tablero.player = P2;
             }
-        }else{alert(`ganador = ${this.ganador}`)}
+        }else{
+            const victoria = document.createElement("div");
+            victoria.classList.add("victoria");
+            victoria.style.display="block";
+            document.body.appendChild(victoria);
+            const p_victoria = document.createElement("p");
+            victoria.appendChild(p_victoria);
+            if(this.ganador!="empate"){
+                p_victoria.textContent=`Ha ganado ${this.ganador}`
+            }else{
+                p_victoria.textContent=`Partida finalizada en empate`
+            }
+            
+        }
 
 
     }
