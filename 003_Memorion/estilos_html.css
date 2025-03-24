@@ -1,0 +1,171 @@
+* {
+    font-family: "verdana", "sans-serif";
+    font-size: medium;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: lightgrey;
+}
+
+.envoult {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+}
+
+.contenedor_ppal {
+    background-color: rgba(255, 110, 110, 0.1);
+    width: 95%;
+    height: 95%;
+
+    border-radius: 50px;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.295);
+    border: solid 5px orange;
+
+    display: flex;
+    flex-direction: column;
+
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    font-size: 0.85em;
+}
+
+header {
+    display: grid;
+    grid-template-rows: 80% 20%;
+    height: 10%;
+
+}
+
+header #cabecera {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    border-bottom: dotted 1px;
+}
+
+header #cabecera h1 {
+    font-size: 2.5em;
+
+}
+
+header nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border-bottom: dotted 1px;
+}
+
+header ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: center;
+    gap: 55px;
+
+}
+
+header ul li {
+    padding-right: 55px;
+
+    border-right: 1px dotted black;
+}
+
+header ul li:first-child {
+    padding-left: 55px;
+
+
+}
+
+header ul li::marker {
+    content: none;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 10% 75% 15%;
+    flex-grow: 3;
+}
+
+main #titulo_juego {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+main #tablero {
+
+    border-top: solid 1px;
+
+    border-color: black;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    justify-items: center;
+    align-items: center;
+
+
+
+}
+
+main #tablero .carta_holder,
+.carta {
+    width: 70%;
+    height: 70%;
+    box-shadow: 5px 5px 25px rgba(0, 0, 0, 0.2);
+    border-radius: 15px;
+}
+
+.carta_holder {
+    background: linear-gradient(45deg, rgba(255, 166, 0, 0.5) 87.5%, black 87%, black 88%, white 88%, white 93%);
+    border: 2px solid rgba(0, 0, 0, 0.8);
+    cursor: pointer;
+}
+
+main #tablero .carta {
+    visibility: hidden;
+    width: 100%;
+    height: 100%;
+    font-size: 7em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: not-allowed;
+
+}
+
+main #info_juego {
+    border: solid 1px;
+    border-color: black;
+    border-radius: 15px;
+    margin: 0 10%;
+    padding-top: 10px;
+    padding-left: 30px;
+}
+
+main #info_juego p {
+    font-style: italic;
+    font-size: 0.85em;
+    margin-top: 5px;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 5%;
+}
