@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cronometro</title>
+    <link rel="stylesheet" href="cronometro.css">
+</head>
+<body id="body">
+    <div class="Multiplicador">
+        <span id="intervaloMult">x1</span>
+        <input id="Multiplicador" type="range" step="0.5" value="1" min="0.5" max="5" oninput="actualizarMult(value)"> 
+    </div>
+    <div class="Cronometro">
+        <p id="Cronometro">00:00</p>
+    </div>
+    <div class="botones">
+        <button id="Iniciar">Iniciar</button>
+        <button id="Parar">Parar</button>
+        <button id="Reiniciar">Reiniciar</button>
+    </div>  
+    <script src="cronometro.js"></script>
+</body>
+</html>

@@ -1,0 +1,69 @@
+body {
+    font-family: 'Verdana', sans-serif;
+    background: linear-gradient(to right, #e0eafc, #cfdef3);
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #333;
+}
+
+.general {
+    background: #2e8b57; /* Color verde simulando una mesa de juego */
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+    padding: 40px;
+    max-width: 700px;
+    text-align: center;
+    border: 2px solid #ddd;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 80vh; /* Ocupar más altura de la pantalla */
+}
+
+.apartado1 {
+    background: #f7f7f7;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    flex: 1;
+    margin: 10px 0;
+}
+
+.apartado2 {
+    background: #f7f7f7;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    flex: 2;
+    margin: 10px 0;
+    align-self: center;
+}
+
+button {
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    padding: 15px 30px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    margin-top: 20px;
+}
+
+button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+button:active {
+    transform: scale(0.95);
+}
+
+p {
+    font-size: 1.2em;
+    margin: 10px 0;
+}

@@ -1,0 +1,316 @@
+/* Importar fuente desde Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+/* Estilos generales del cuerpo */
+body {
+    font-family: 'Press Start 2P', sans-serif;
+    background-color: #000000;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+}
+
+/* Estilos para el contenedor principal */
+.todo {
+    position: relative;
+    background: #000000;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+    padding: 20px;
+    max-width: 80%;
+    text-align: center;
+    border: 2px solid #ddd;
+    margin-top: 5%;
+}
+
+/* Estilos para el título */
+h1 {
+    color: #343a40;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+/* Estilos para el espacio de mensajes */
+#espacio {
+    font-size: 3.5em;
+    text-align: center;
+    color: #ff0000;
+    margin-bottom: 20px;
+    margin-left: 3px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    font-weight: bold;
+    font-family: 'Press Start 2P', sans-serif;
+}
+
+/* Estilos para los contenedores de botones */
+.botones, .botones2 {
+    display: flex;
+    justify-content: space-around;
+    padding: 0 20px;
+    gap: 60px;
+    flex-wrap: wrap;
+}
+
+/* Estilos específicos para los botones del jugador */
+.botones {
+    background-color: #00831f;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos específicos para los botones del bot */
+.botones2 {
+    background-color: #5b0000;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos para las imágenes de los botones */
+img {
+    width: 100px;
+    height: 100px;
+    border: 5px solid #000000;
+    border-radius: 10px;
+    background-color: #ffffff;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Efecto hover para las imágenes */
+img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+/* Estilos para deshabilitar la interacción con las imágenes del bot */
+.botones2 img {
+    cursor: not-allowed;
+    opacity: 0.8;
+    pointer-events: none;
+    transition: none;
+    box-shadow: none;
+}
+
+/* Estilos para las vidas */
+.vidas {
+    position: absolute;
+    top: -90px;
+    right: 0px;
+    background-color: #000000;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    padding: 2.5%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    gap: 25px;
+}
+
+/* Estilos para las imágenes de vidas del jugador */
+.vidasPlayer img {
+    width: 40px;
+    height: 40px;
+    border: 2px solid #00ff08;
+    border-radius: 15%;
+    cursor: not-allowed;
+    pointer-events: none;
+    transition: none;
+}
+
+/* Estilos para las imágenes de vidas del bot */
+.vidasBot img {
+    width: 40px;
+    height: 40px;
+    border: 2px solid #f44336;
+    border-radius: 15%;
+    cursor: not-allowed;
+    pointer-events: none;
+    transition: none;
+}
+
+/* Estilos para los contenedores de vidas del jugador y del bot */
+.vidasPlayer, .vidasBot {
+    display: flex;
+    gap: 5px;
+}
+
+/* Estilo para la interacción activa con las imágenes */
+img:active { 
+    transform: scale(0.95); 
+    transition-duration: 0ms;
+}
+
+/* Estilos para el contenedor de finalización del juego */
+.finalizar {
+    display: none;
+    position: absolute;
+    background: rgba(0, 0, 0, 1);
+    color: #ffffff;
+    padding: 300px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+}
+
+/* Estilos para el botón de reinicio */
+.botonReiniciar {
+    background-color: #ff0000;
+    border: 2px solid #ffffff;
+    border-radius: 10px;
+    font-size: 30px;
+    color: #ffffff;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-weight: bold;
+    cursor: pointer;
+    margin-left: 20%;
+    margin-top: 20%;
+}
+
+/* Efecto hover para el botón de reinicio */
+.botonReiniciar:hover {
+    transform: scale(0.95);
+    transition: transform 0.0001s ease, box-shadow 0.3s ease;
+    background-color: #ff6868;
+}
+
+/* Estilos para la puntuación */
+.puntuacion {
+    font-size: 2.5em;
+    text-align: center;
+    color: #ffffff;
+    margin-bottom: 20px;
+    margin-left: 3px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+/* Colores específicos para la puntuación */
+#puntuacion {
+    color: #00ff08;
+}
+#puntuacion2 {
+    color: #ff0000;
+}
+
+/* Estilos para el texto de victorias */
+#textoVictorias {
+    font-family: sans-serif;
+    color: #ffffff;
+    background-color: #000000;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    top: 50%;
+    right: 10%;
+    transform: translateY(-50%);
+    text-align: center;
+}
+
+/* Estilos para el contador de victorias consecutivas */
+#victoriasConsecutivas {
+    font-family: 'Press Start 2P', sans-serif;
+    color: #ffffff;
+    background-color: #000000;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    top: 50%;
+    right: 5%;
+    transform: translateY(-50%);
+    text-align: center;
+}
+
+/* Estilos responsivos para pantallas más pequeñas */
+@media (max-width: 600px) {
+    .finalizar{
+        top: -18%;
+    }
+
+    .vidas {
+        position: absolute;
+        top: 10px; /* Ajusta según sea necesario */
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: #000000;
+        border: 2px solid #ddd;
+        border-radius: 10px;
+        padding: 30px;
+        margin-left: 200px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        display: flex;
+        flex-direction: column; /* Cambia la dirección del flujo de las vidas */
+        align-items: center; /* Centra horizontalmente */
+        gap: 10px; /* Añade un espacio entre las vidas */
+        z-index: 1100; /* Asegura que esté encima de .todo */
+    }
+    
+    .vidasPlayer, .vidasBot {
+        display: flex;
+        flex-direction: column; /* Hace que las vidas se dispongan verticalmente */
+        gap: 5px; /* Ajusta el espacio entre las vidas */
+    }
+    
+    body {
+        height: auto;
+    }
+
+    .todo {
+        max-width: 100%;
+        margin-top: 10%;
+        margin-bottom: 40%;
+    }
+
+        /* Estilos para las secciones de botones */
+    .botones, .botones2 { 
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    /* Estilos para el botón de reiniciar */
+    .botonReiniciar { 
+        margin-left: 0;
+        margin-top: 10%;
+    }
+
+    /* Estilos para el texto de victorias */
+    #textoVictorias { 
+        top: auto;
+        right: auto;
+        left: 50%;
+        bottom: 10%;
+        transform: translateX(-50%);
+    }
+
+    /* Estilos para el contador de victorias consecutivas */
+    #victoriasConsecutivas { 
+        margin-top: 0;
+        padding-top: 10px;
+        right: auto;
+        left: 50%;
+        bottom: 10%;
+        transform: translateX(-50%);
+    }
+
+    /* Estilos para el panel de victorias */
+    #panelVictorias { 
+        position: absolute;
+        z-index: 2000;
+        bottom: -72%;
+    }
+}

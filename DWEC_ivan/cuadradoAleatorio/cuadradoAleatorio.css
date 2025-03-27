@@ -1,0 +1,40 @@
+body {
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+button{
+    border: 2px solid white;
+    padding: 10px;
+    background-color: #333;
+    margin: 20px;
+    color: white;
+    border-radius: 10px;
+    font-size: 15px;
+}
+
+button:hover{
+    border: 2px solid rgb(0, 255, 247);
+    background-color: #000000;
+    color: rgb(0, 255, 247);
+}
+
+.padre {
+    border: 1px solid white;
+    width: 1200px;
+    height: 600px;
+    background-color: #333;
+    margin: 20px;
+}
+
+.hijo1 {
+    width: 30px;
+    height: 30px;
+    background-color: yellow;
+}

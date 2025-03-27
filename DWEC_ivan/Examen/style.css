@@ -1,0 +1,17 @@
+body{
+    background-color: black;
+}
+
+.general{
+    padding: 25px;
+    border: 2px solid white;
+    max-width: 40%;
+}
+
+p{
+    color: white;
+}
+
+#resultado{
+    color: greenyellow;
+}

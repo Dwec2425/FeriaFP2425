@@ -1,0 +1,10 @@
+.uno {
+    width: 29px;
+    height: 29px;
+    margin-top: 270px;
+    margin-left: 690px;
+    background-color: darkorchid;
+    border: 1px solid black;
+    position: absolute;
+    z-index: 1;
+}

@@ -1,0 +1,44 @@
+body{
+    background-color: rgb(231, 222, 231);
+    text-align: center;
+    color: rgb(255, 255, 255);
+    font-size: 17px;
+}
+
+#menu{
+    background-color: rgb(164, 8, 164);
+    margin: 100px 400px 0px 400px;
+    padding: 1px 0px 20px 0px;
+    border-radius: 10px;
+}
+
+button{
+    background-color: #dc4ad3;
+    border: 0;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+    padding: 10px;
+    color: rgb(255, 255, 255);
+    font-size: 18px;
+}
+button:hover {
+    background-color: #b83cb5;
+}
+
+#texto{
+    background-color: #fff9ff;
+    border: 1;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+    padding: 10px 50px 10px 50px;
+    margin: 0;
+    color: rgb(0, 0, 0);
+    font-size: 18px;
+}
+
+#imprimir{
+    background-color: #fff9ff;
+    border: 0;
+    padding: 10px;
+    margin: 0px 0px 20px 0px;
+    color: rgb(0, 0, 0);
+    font-size: 18px;
+}

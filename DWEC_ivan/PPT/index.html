@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Piedra Papel Tijera</title>
+    <!-- Enlace al archivo CSS para los estilos -->
+    <link rel="stylesheet" href="PPT.css">
+</head>
+<body>
+    <!-- Div que muestra el final del juego y tiene un botón para reiniciar -->
+    <div class="finalizar" id="finalizar">
+        <p id="espacio"></p> <!-- Espacio para mensajes finales -->
+        <button class="botonReiniciar" id="botonReiniciar" onclick="reiniciar()">REINICIAR</button> <!-- Botón para reiniciar el juego -->
+    </div>
+
+    <!-- Div para mostrar el panel de victorias consecutivas -->
+    <div id="panelVictorias">
+        <p id="textoVictorias">VICTORIAS CONSECUTIVAS: </p> <!-- Texto de victorias consecutivas -->
+        <p id="victoriasConsecutivas">0</p> <!-- Contador de victorias consecutivas -->
+    </div>
+
+    <!-- Div principal que contiene todos los elementos del juego -->
+    <div class="todo" id="todo">
+        <!-- Div para los botones de elección (piedra, papel, tijera) -->
+        <div class="botones">
+            <img onclick="piedra()" src="piedra.png" id="piedra"> <!-- Imagen de piedra con evento onclick -->
+            <img onclick="papel()" src="papel.png" id="papel"> <!-- Imagen de papel con evento onclick -->
+            <img onclick="tijera()" src="tijera.png" id="tijera"> <!-- Imagen de tijera con evento onclick -->
+        </div>
+
+        <!-- Div para mostrar las puntuaciones -->
+        <div class="puntuacion">
+            <p id="puntuacion">000</p> <!-- Puntuación del jugador -->
+            <p id="puntuacion2">000</p> <!-- Puntuación del bot -->
+        </div>
+
+        <!-- Div para mostrar las elecciones del bot (piedra, papel, tijera) -->
+        <div class="botones2">
+            <img src="piedra.png" id="piedra2"> <!-- Imagen de piedra para el bot -->
+            <img src="papel.png" id="papel2"> <!-- Imagen de papel para el bot -->
+            <img src="tijera.png" id="tijera2"> <!-- Imagen de tijera para el bot -->
+        </div>
+
+        <!-- Div para mostrar las vidas de los jugadores -->
+        <div class="vidas">
+            <div class="vidasPlayer">
+                <img src="vidas1.png" id="jugador5"> <!-- Vidas del jugador 1 -->
+                <img src="vidas1.png" id="jugador4">
+                <img src="vidas1.png" id="jugador3">
+                <img src="vidas1.png" id="jugador2">
+                <img src="vidas1.png" id="jugador1">
+            </div>
+            <div class="vidasBot">
+                <img src="vidas1.png" id="bot5"> <!-- Vidas del bot -->
+                <img src="vidas1.png" id="bot4">
+                <img src="vidas1.png" id="bot3">
+                <img src="vidas1.png" id="bot2">
+                <img src="vidas1.png" id="bot1">
+            </div>
+        </div>
+    </div>
+</body>
+<!-- Enlace al archivo JavaScript para la lógica del juego -->
+<script src="PPT.js"></script>
+</html>

@@ -1,0 +1,63 @@
+body{
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(45deg, red, blue);
+}
+
+.padre{
+    border: 1px solid white;
+    width: 1200px;
+    height: 600px;
+    background-color: #333;
+    margin: 20px;
+}
+
+.boton{
+    color: white;
+    border: 2px solid white;
+    width: 100px;
+    height: 70px;
+    background-color: black;
+    font-size: large;
+}
+
+.boton:hover{
+    color: rgb(0, 0, 0);
+    border: 2px solid rgb(0, 0, 0);
+    width: 100px;
+    height: 70px;
+    background-color: #ffffff;
+    font-size: large;
+}
+
+.hijo{
+    width: 100px;
+    height: 100px;
+    border: 1px solid white;
+}
+
+.fondoAzul{
+    background-color: blue;
+}
+
+.fondoRojo{
+    background-color: red;
+}
+
+.borde25{
+    border-radius: 25%;
+}
+
+.dash{
+    border: 2px dashed;
+}
+
+.degradado{
+    background: linear-gradient(45deg, blue, red);
+}

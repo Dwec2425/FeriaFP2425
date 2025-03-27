@@ -1,0 +1,95 @@
+/* Estilos generales */
+body {
+    background-color: #121212;
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin: 0;
+    padding-top: 30px;
+}
+
+.todo {
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 800px;
+    width: 100%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    border: 2px solid #ffffff;
+    background-color: rgba(18, 18, 18, 0.9);
+    
+}
+
+p {
+    margin: 15px 0;
+}
+
+input[type="date"], input[type="text"] {
+    background-color: #333333;
+    color: #ffffff;
+    border: 1px solid #555555;
+    padding: 10px;
+    border-radius: 5px;
+    width: calc(100% - 24px);
+    box-sizing: border-box;
+}
+
+/* Estilos para el selector de fecha */
+input[type="date"] {
+    background-color: #333333;
+    color: #ffffff;
+    border: 1px solid #555555;
+    padding: 10px;
+    border-radius: 5px;
+    width: calc(100% - 24px);
+    box-sizing: border-box;
+    appearance: none; /* Elimina el estilo por defecto del navegador */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    position: relative;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+    filter: invert(1); /* Cambia el icono del selector a blanco */
+}
+
+button {
+    background-color: #6200ea;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #3700b3;
+}
+
+.intervalo {
+    background-color: #333333;
+    padding: 10px;
+    margin-right: 20px;
+    border-radius: 5px;
+    min-height: 50px;
+}
+
+.textoIntervalo {
+    color: #ffffff;
+}
+
+select { 
+    background-color: #333333; 
+    color: #ffffff; 
+    border: 1px solid #555555; 
+    padding: 10px; 
+    border-radius: 5px; 
+    width: calc(100% - 24px); 
+    box-sizing: border-box; 
+    appearance: none; 
+    -webkit-appearance: none; 
+    -moz-appearance: none; 
+}

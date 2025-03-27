@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="general" id="general">
+        <div class="datos">
+            <p>Numero 1:</p>
+            <input type="number" id="op1" value=5>
+            <p>Numero 2:</p>
+            <input type="number" id="op2" value=4>
+            <p>Resultado:</p>
+            <p id="resultado">?????????????</p>
+        </div>
+        <div class="botones">
+            <div class="sumar" id="sumar" onclick="sumar()">
+                <p>sumar</p>
+            </div>
+            <div class="restar" id="restar" onclick="restar()">
+                <p>restar</p>
+            </div>
+            <div class="multiplicar" id="multiplicar" onclick="multiplicar()">
+                <p>multiplicar</p>
+            </div>
+            <div class="dividir" id="dividir" onclick="dividir()">
+                <p>dividir</p>
+            </div>
+        </div>
+    </div>
+</body>
+    <script src="app.js"></script>
+</html>
