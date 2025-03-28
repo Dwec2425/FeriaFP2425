@@ -72,7 +72,7 @@ html,body{
 @media(max-width:400px){
     #tablero{
         width: 90%;
-        height: 90%;
+        height: 80%;
         display:flex;
         border:3px solid green;
         
