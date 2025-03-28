@@ -82,28 +82,32 @@ class carta {
 const baraja1 = new baraja(48);
 if (window.innerWidth < 500) {
     //es un movil (o pantalla pequeña)
-    addBotonera();
-    
+   
+    const botonera = document.createElement("div");
+    botonera.classList.add("botonera");
+    document.body.appendChild(botonera);
+    //añadir botones
+    const baraja_button = document.createElement("input");
+    baraja_button.setAttribute("type", "button");
+    baraja_button.setAttribute("value", "Barajar");
+    baraja_button.style.float = "left";
+    botonera.appendChild(baraja_button)
+    const repartir_button = document.createElement("input");
+    repartir_button.setAttribute("type", "button");
+    repartir_button.setAttribute("value", "Empezar");
+    botonera.appendChild(repartir_button);
 
-    function addBotonera(){
-        const botonera = document.createElement("div");
-        botonera.classList.add("botonera");
-        document.body.appendChild(botonera);
+    baraja_button.addEventListener("click",()=>{
+        baraja1.barajar();
+        baraja1.muestraEnDOM();
         
+    })
+    repartir_button.addEventListener("click",()=>{
+        location.reload()
+        
+    })
 
     
-    
-        const baraja_button = document.createElement("input");
-        baraja_button.setAttribute("type", "button");
-        baraja_button.setAttribute("value", "Barajar");
-        baraja_button.style.float = "left";
-        botonera.appendChild(baraja_button)
-        const repartir_button = document.createElement("input");
-        repartir_button.setAttribute("type", "button");
-        repartir_button.setAttribute("value", "Empezar");
-        botonera.appendChild(repartir_button)
-
-    }
 } else {
     //es un ordenador (o pantalla mas grande)
     const instrucciones_p = document.createElement("p");
@@ -121,3 +125,4 @@ if (window.innerWidth < 500) {
     })
 }
 baraja1.muestraEnDOM();
+
