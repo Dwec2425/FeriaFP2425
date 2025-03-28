@@ -1,0 +1,99 @@
+*{
+    box-sizing: border-box;
+    
+}
+html,body{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background-color: hsla(128, 75%, 73%, 0.3);
+    
+}
+#botones{
+    height: 10%;
+    aspect-ratio: 16/9;
+    place-self: center center;
+    border:solid 1px black;
+    
+}
+#tablero{
+    
+    width: 80%;
+    height: 90%;
+    display:flex;
+    border:3px solid green;
+    
+    justify-content: center;
+    align-content: space-around;
+    flex-wrap: wrap;
+    gap:2%;
+}
+.carta{
+    width: 6%;
+    aspect-ratio: 3/5;
+    border:1px solid rgb(0, 0, 0);
+    background-image: linear-gradient(rgba(84, 125, 238, 0.521), rgba(138, 13, 13, 0.459));
+    border-radius: 5px;
+    display:grid;
+    grid-template-columns: 10% 80% 10%;
+    grid-template-rows: 10% 80% 10%;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    padding:0.5em;
+    font-size: small;
+
+}
+.carta p{
+    
+    color:white;
+    font-weight: bold;
+    place-self: center center;
+}
+
+.oros{
+    background-color: yellow;
+}
+
+.copas{
+    background-color: red;
+}
+.espadas{
+    background-color: blue;
+}
+.bastos{
+    background-color: green;
+}
+
+
+@media(max-width:400px){
+    #tablero{
+        width: 90%;
+        height: 90%;
+        display:flex;
+        border:3px solid green;
+        
+        justify-content: center;
+        align-content: space-around;
+        flex-wrap: wrap;
+        gap:2%;
+    }
+    .carta{
+        height: 6%;
+        aspect-ratio: 3/5;
+    }
+    .carta p{
+        font-weight: lighter;
+    }
+    .botonera{
+        padding-top:0.5em;
+        display: flex;
+        justify-content: center;
+    }
+    input{
+        margin: 0 1em;
+    }
+}
