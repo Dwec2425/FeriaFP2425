@@ -11,6 +11,11 @@ const SIZELOGO = 150;
 const canvas = document.getElementById("mycanvas");
 const ctx = canvas.getContext("2d");
 
+let=nombreParaCanvas = "Escribe tu nombre";
+let texto = { x: canvas.width / 2, dx: DERECHA, y: canvas.height / 2, dy: ARRIBA, ancho: 200, alto:50 };
+const colores = ["red", "blue", "green", "purple", "orange"];
+let indiceColores = 0;
+
 
 let pelota = { x: canvas.width / 2, dx: DERECHA, y: canvas.height / 2, dy: ARRIBA, r: RADIO };
 
@@ -21,10 +26,24 @@ let imagen = {html:img, url:img.src, x: canvas.width / 4, dx: DERECHA, y: canvas
 img.onload = ()=>{
 requestAnimationFrame(animar);
 }
-
-function animar() {
-
+let contadorFrames =0;
+function animar() { 
+    contadorFrames++;
     ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+    ctx.font = "30px Arial"; // Definir el estilo de fuente
+    ctx.fillStyle = colores[indiceColores]; // Color del texto
+    if(nombreParaCanvas ==="") nombreParaCanvas="Escribe tu nombre";
+    ctx.fillText(nombreParaCanvas, texto.x, 50); // Dibujar el texto en la posición (x, 100)
+    texto.x+=2;
+    if (texto.x > canvas.width) {
+        texto.x = -200;  // 200 es el ancho del texto (ajustar si es necesario)
+    }
+    if(contadorFrames>90){
+        indiceColores=(indiceColores+1)%colores.length;
+        contadorFrames=0;}
+
+ 
 
 
 dibujarPelota();
@@ -109,3 +128,33 @@ function animarPelota(){
     }
 
 }
+
+
+const listElements = document.querySelectorAll("li");
+const inicio = listElements[0];
+inicio.addEventListener("click",()=>{location.reload();})
+
+
+const tuNombreLi = listElements[1];
+tuNombreLi.innerHTML="";
+
+const nombreLabel=document.createElement("label");
+nombreLabel.innerHTML="escribe tu nombre"
+tuNombreLi.appendChild(nombreLabel)
+
+const nombreTxt = document.createElement("input");
+nombreTxt.type="textBox"
+nombreTxt.value="Pepe"
+tuNombreLi.appendChild(nombreTxt)
+
+const nombreBtn = document.createElement("input");
+nombreBtn.type="button"
+nombreBtn.value="Dale!"
+tuNombreLi.appendChild(nombreBtn)
+
+nombreBtn.addEventListener("click",()=>{
+    nombreParaCanvas = nombreTxt.value;
+    console.log(nombreParaCanvas);
+})
+
+

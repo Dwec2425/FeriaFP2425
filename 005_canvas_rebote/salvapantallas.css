@@ -41,7 +41,7 @@ main{
 
 nav, ul{
     display: flex;
-    justify-content: start;
+    justify-content: space-evenly;
     align-items: center;
   
    
@@ -53,8 +53,43 @@ nav li{
     box-shadow: 1px 1px 5px black;
     margin:0 1em;
     cursor: pointer;
+    text-align: center;
+    justify-content: center;
+    
+    
+}
+li:nth-child(2) {
+   width: 100%;
+    position:relative;
+    display:flex;
+  justify-content: space-around; 
+  align-items: center;
+  flex-wrap: wrap;
+  
+}
+li:nth-child(2) label{
+  
+    margin: 0.5em;
+  text-align: center;
+  text-justify: center;
+   
+}
+li:nth-child(2) input[type="textbox"]{
+  font-size:large;
+  width: 200px;
+  text-align: center;
+   
+}
+li:nth-child(2) input[type="button"]{
+  
+  width: 50px;
+  text-align: center;
+  justify-self: end;
+  margin: 0 0 0 1em;
+   
 }
 canvas{
     box-shadow: 1px 1px 5px black;
+   
 }
 
