@@ -1,3 +1,5 @@
+const EQUIPO = 1 //escribe 1 para BARÇA 2 para Real Madrid y 0 para logo del IEs Juan García Valdemora
+
 const DERECHA = 1;
 const IZQUIERDA = -1;
 const ABAJO = 1;
@@ -20,7 +22,10 @@ let indiceColores = 0;
 let pelota = { x: canvas.width / 2, dx: DERECHA, y: canvas.height / 2, dy: ARRIBA, r: RADIO };
 
 const img = new Image();
-img.src="JDV.png"
+
+urlsImagenes = ["JDV.png","barca.png","rmcf.png"]
+
+img.src= urlsImagenes[EQUIPO]
 let imagen = {html:img, url:img.src, x: canvas.width / 4, dx: DERECHA, y: canvas.height / 4, dy: ARRIBA, r: SIZELOGO };
 
 img.onload = ()=>{
