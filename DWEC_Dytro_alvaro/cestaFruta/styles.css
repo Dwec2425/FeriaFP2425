@@ -1,0 +1,84 @@
+body {
+    background-image: url(Images/bg.png);
+    background-color: black;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    min-height: 98vh; /* Height center adjust */    
+}
+
+#start{
+    width: 100%;
+    background-color: black;
+    z-index: 4;
+    height: 101vh;
+    position: absolute;
+    opacity: 0.7;
+    margin-left: -1%;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    margin-top: -1%;
+}
+
+#buttonStart{
+    z-index: 5;
+    position: absolute;
+    background-color: aqua;
+    padding: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    display: flex;
+    border: 2px solid black;
+    border-radius: 10px;
+    scale: 1.5;
+
+}
+
+.basket {
+    background-image: url(Images/basket.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: 80%; /* Distance from top */
+    left: 50%; /* Distance from laterals */
+    transform: translate(-50%, -50%); /* Center adjust */
+    z-index: 2; /* Image priority */
+}
+
+/*Controls*/
+.controls{
+    border: 2px solid white;
+    border-radius: 10px;
+    position: fixed;
+    padding-right: 30px;
+    padding-left: 10px;
+    padding-bottom: 20px;
+    right: 2.5%;
+    bottom: 2.5%;
+    color: white;
+    background-color: black;
+    scale: 1.1;
+    z-index: 3;
+}
+
+.fruit {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    animation: fall linear 5s;
+    z-index: 2;
+    left: 4.5%;
+}
+
+.lives{
+    position: absolute; 
+    top: 5.5%;
+    right: 12.5%;
+    display: flex;
+    width: 50px; 
+    height: 50px;
+}

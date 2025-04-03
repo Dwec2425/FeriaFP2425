@@ -1,0 +1,24 @@
+Día 9 Diciembre:
+    -Creación de archivos y organización.
+
+Día 16 Diciembre:
+    -Linkar css y js a html.
+    -Diseño visual del juego, implementado el título, el tablero y los estilos.
+
+Día 8 Enero:
+    -He implementado colores para usar event listeners e ir avanzando con el tema de seleccionar los botones.
+    -He implementado el botón de reset.
+
+Día 9 Enero:
+    -He añadido los símbolos correspondientes al 3 en raya (X, O) con su color correspondiente.
+    -He implementado que juegue la máquina, es decir, cuando nosotros seleccionamos una casilla, la máquina automáticamente
+    busca una casilla vacía y pone su símbolo (O) en una casilla vacía al azar.
+    -He implementado para que no pueda modificar mi símbolo, antes podía cambiar mi botón X por O, he puesto un 
+    if para que ya no pase.
+
+Día 10 Enero:
+    -He implementado el mensaje de si gano o pierdo contra la máquina.
+    -He creado un array para guardar las combinaciones posibles para ganar.
+    -He creado una variable para que no me permita seguir jugando después de ganar o perder. 
+    -He actualizado el html con div resultado (que incluye el mensaje).
+    -He configurado el css con parámetros para el mensaje de ganar o perder.

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Dentro del head tengo las conexiones con el docuemnto javascript y el css--> 
+    <link rel="stylesheet" href="PiedraPapelTijera.css">
+    <script src="PiedraPapelTijera.js"></script>
+    <title>Piedra-Papel-Tijera</title>
+</head>
+<body>
+    <!--Aquí he implementado un div para que salga el texto final (ganas o pierdes) junto con un botón de recargar la página 
+    para comenzar una nueva partida-->
+    <div id="finalJuego">
+        <p id="textoFinal"></p>
+        <button id="recargar" onclick="recargarPagina()">Volver a jugar</button>
+    </div>
+    <!--Este es el h1 con el título del juego-->
+    <h1>PIEDRA-PAPEL-TIJERA</h1>   
+    <!--Aquí he implementado el div que contiene las imágenes de los corazones(las vidas) del jugador, empieza con la imágen de los 10 corazones
+    intactos -->
+    <div id="result-vidasPer">
+        <img id="corazonesPer" src="vidasPerMaq10.jpg">
+    </div>
+    <!--El div que contiene el contador y el mensaje de multiplicar los puntos por 2-->
+    <div class="puntos-containerper">
+        <!--Aquí el div que muestra el contador de los puntos que va obteniendo el jugador por cada ronda, comienza en 0-->
+        <div id="result-puntosPer">0 PUNTOS</div>
+        <!--Este es el div que se muestra cuando un jugador gana 2 rondas seguidas, para indicar que los puntos se multiplican por 2-->
+        <div id="puntosx2per" style="display: none;">PUNTOS x 2</div>
+    </div>  
+    <!--Este es el div que contiene las imágenes del jugador junto con los eventos que llaman a cada una de las funciones dependiendo
+    de la imágen en la que pulse el jugador-->
+    <div class="image-container">
+        <img id="piedra1" src="Piedra1.jpg" onclick="piedraPer()">
+        <img id="papel1" src="Papel1.jpg" onclick="papelPer()">
+        <img id="tijera1" src="Tijera1.jpg" onclick="tijeraPer()">
+    </div>
+    <!--Aquí he puesto el div contenedor con el resultadoPer, que muestra la imágen seleccionada por el jugador, resultado, muestra la
+    comparativa de los resultados del jugador y la máquina y dice si el jugador a ganado, perdido o ha habido empate con la máquina, 
+    y resultadoMaq, que muestra la imágen seleccionada aleatoriamente para la máquina-->
+    <div class="result-container">
+        <div id="resultadoPer"></div>
+        <div id="resultado"></div>
+        <div id="resultadoMaq"></div>
+    </div>
+   <!--Este es el div que contiene las imágenes de la máquina-->
+    <div class="image2-container">
+        <img id="piedra2" src="Piedra2.jpg">
+        <img id="papel2" src="Papel2.jpg">
+        <img id="tijera2" src="Tijeras222.jpg">
+    </div>
+     <!--Aquí el contenedor que integra el contador de los puntos que va obteniendo la máquina por cada ronda y el aviso de puntos x 2 
+     en el caso de la máquina-->
+    <div class="puntos-containermaq">
+    <div id="result-puntosMaq">0 PUNTOS</div>
+    <div id="puntosx2maq" style="display: none;">PUNTOS x 2</div>
+    </div>
+    <!--Aquí he implementado los div que contienen las imágenes de los corazones(las vidas) de la máquina-->
+    <div id="result-vidasMaq"> 
+        <img id="corazonesPer" src="vidasPerMaq10.jpg">
+    </div>
+
+</body>
+</html>

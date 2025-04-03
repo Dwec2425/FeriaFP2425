@@ -1,0 +1,57 @@
+body {
+    margin: 0;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    background-image: url('cielo.jpg');
+}
+
+#contenedor {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mosquito {
+    position: absolute; 
+    width: 50px; 
+    height: 50px; 
+    background-image: url('mosquito.png');
+    background-size: cover;
+    background-position: center;
+}
+
+.sangre{
+    position: absolute; 
+    width: 50px; 
+    height: 50px; 
+    background-image: url('sangre.png');
+    background-size: cover;
+    background-position: center;
+    border: none;
+    border: 0px;
+}
+
+.mensaje{
+    position: absolute;
+    color: black;
+    font-size: 15px;
+    z-index: 10;
+}
+
+#tiempo {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 24px;
+    padding: 10px;
+    border: 3px solid rgb(236, 59, 174);
+    border-radius: 10px;
+    text-align: center;
+}
+
+  

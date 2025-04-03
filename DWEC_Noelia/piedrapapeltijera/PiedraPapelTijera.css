@@ -1,0 +1,161 @@
+/*Es el css lo he hecho con la ia aunque luego ha habido cosas que he añadido yo y algunas que he modificado*/
+
+/* Estilo general del cuerpo */
+body {
+    font-family: 'Comic Sans MS', sans-serif;
+    background-color: #f0f8ff;
+    color: #333;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Estilo para los encabezados */
+h1 {
+    font-size: 2.5em;
+    color: #8d44ba;
+    margin-top: 8px;
+    margin-bottom: 20px;
+}
+
+/* Estilo para las imágenes */
+img {
+    width: 90px; /* Ajusta el tamaño de las imágenes */
+    height: auto; /* Mantiene la relación de aspecto */
+    margin: 10px;
+    cursor: pointer; /* Cambia el cursor al pasar sobre la imagen */
+    transition: transform 0.2s; /* Efecto de transición */
+    border-radius: 20px;
+}
+
+img:hover {
+    transform: scale(1.1); /* Aumenta el tamaño de la imagen al pasar el mouse */
+}
+
+/* Estilo para el contenedor de los resultados */
+.result-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* Estilo para los resultados */
+#resultadoPer, #resultadoMaq {
+    font-size: 1.2em;
+    margin-top: 15px;
+    color: #2980b9;
+}
+
+#resultado{
+    font-size: 1.2em;
+    margin-top: 70px;
+    color: #2980b9;
+}
+
+/* Estilo para el resultado final */
+#resultado {
+    font-weight: bold;
+    color: #e74c3c; /* Color para perder */
+}
+
+#resultadoMaq {
+    color: #27ae60; /* Color para ganar */
+}
+
+/*Estilo para los resultados de los puntos*/
+#result-puntosPer, #result-puntosMaq {
+    font-family: 'Comic Sans MS', sans-serif; /* Asegura que se use la fuente Arial */
+    font-size: 1.5em; /* Aumenta el tamaño de la fuente según sea necesario */
+    margin: 10px 0; /* Espaciado vertical para separar de otros elementos */
+}
+
+
+/* Estilo para el contenedor de las imágenes */
+.image-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/*Estilo del div del final del juego*/
+
+#finalJuego {
+    z-index: 1000;
+    position: absolute; /* Cambiar a absolute */
+    top: 54%; /* Centramos verticalmente */
+    left: 50%; /* Centramos horizontalmente */
+    transform: translate(-50%, -50%); /* Ajustamos la posición al centro */
+    width: 450px; /* Ajusta el ancho según sea necesario */
+    height: 360px; /* Cambia a auto para permitir que el contenido determine la altura */
+    background-color:rgba(255, 0, 0, 1);
+    display: none; /* Usamos flexbox para centrar el contenido */
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+    border-radius: 10px; /* Opcional: añade bordes redondeados */
+    flex-direction: column; /* Asegura que los elementos se apilen verticalmente */
+    font-size: 3em;   
+}
+#recargar {
+    font-size: 0.5em; /* Aumenta el tamaño de la fuente */
+    padding: 10px 20px; /* Aumenta el padding (espaciado interno) */
+    margin-top: 20px; /* Espacio superior para separar del texto */
+    border: none; /* Sin borde */
+    border-radius: 5px; /* Bordes redondeados */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+    transition: background-color 0.3s; /* Transición suave para el color de fondo */
+    color:black;
+}
+
+#recargar:hover {
+    background-color: rgba(211, 211, 211, 0.7); /* Color de fondo al pasar el mouse */
+}
+
+/* Estilo para los contenedores de vidas */
+
+#result-vidasPer, #result-vidasMaq {
+    display: flex; /* Usamos flexbox para centrar el contenido */
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+    width: 400px; /* Ancho fijo para el contenedor */
+    height: 60px; /* Altura fija para el contenedor */
+    margin-left: 540px;
+}
+
+#result-vidasPer img, #result-vidasMaq img {
+    width: 330px; /* Ajusta el tamaño según sea necesario */
+    height: 35px; /* Mantiene la relación de aspecto */
+    margin-left: 80px;
+}
+
+#corazonesPer,
+#corazonesMaq{
+    margin-right: 75px;
+}
+
+.puntos-containerper {
+    display: flex; /* Utiliza flexbox para alinear los elementos en línea */
+    justify-content: center; /* Centra los elementos horizontalmente */
+    align-items: center; /* Centra los elementos verticalmente */
+    margin: 10px 0; /* Espaciado vertical para separar de otros elementos */
+}
+
+#puntosx2per {
+    font-size: 1.5em; /* Ajusta el tamaño de la fuente según sea necesario */
+    color: #8d44ba; /* Color para destacar el texto */
+    margin-left: 10px; /* Espaciado a la izquierda para separarlo de la puntuación */
+    display: none; /* Oculto por defecto */
+}
+
+.puntos-containermaq {
+    display: flex; /* Utiliza flexbox para alinear los elementos en línea */
+    justify-content: center; /* Centra los elementos horizontalmente */
+    align-items: center; /* Centra los elementos verticalmente */
+    margin: 10px 0; /* Espaciado vertical para separar de otros elementos */
+}
+
+#puntosx2maq {
+    font-size: 1.5em; /* Ajusta el tamaño de la fuente según sea necesario */
+    color: #8d44ba; /* Color para destacar el texto */
+    margin-left: 10px; /* Espaciado a la izquierda para separarlo de la puntuación */
+    display: none; /* Oculto por defecto */
+}
+

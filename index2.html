@@ -1,0 +1,771 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="ProfeLuis0307">
+    <meta name="description" content="Inicio de la página para la feria de FP de Guadalalajara del curso 2024 2025">
+    <meta name="keywords" content="feria, FP, Formación Profesional">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="app.js" defer></script>
+    <title>Feria FP 2425 - Proyectos</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+        :root {
+            --primary: #4361ee;
+            --secondary: #3f37c9;
+            --accent: #f72585;
+            --light: #f8f9fa;
+            --dark: #212529;
+            --success: #4cc9f0;
+            --warning: #f9c74f;
+            --danger: #f94144;
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            color: var(--dark);
+            min-height: 100vh;
+        }
+
+        header {
+            background: linear-gradient(to right, var(--primary), var(--secondary));
+            color: white;
+            padding: 2rem 1rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            z-index: 1;
+            position: relative;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto;
+            opacity: 0.9;
+            z-index: 1;
+            position: relative;
+        }
+
+        .animated-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+            opacity: 0.1;
+        }
+
+        .animated-bg div {
+            position: absolute;
+            border-radius: 50%;
+            background: white;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .project-category {
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: var(--transition);
+            transform: translateY(0);
+        }
+
+        .project-category:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+        }
+
+        .category-header {
+            background: var(--primary);
+            color: white;
+            padding: 1.2rem;
+            text-align: center;
+            font-size: 1.2rem;
+            font-weight: 600;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .delocraft .category-header {
+            background: var(--accent);
+        }
+
+        .nayeli .category-header {
+            background: var(--success);
+        }
+
+        .mma .category-header {
+            background: var(--warning);
+            color: var(--dark);
+        }
+
+        .project-list {
+            padding: 1rem;
+        }
+
+        .project-item {
+            display: flex;
+            align-items: center;
+            padding: 0.8rem;
+            border-radius: 6px;
+            margin-bottom: 0.5rem;
+            transition: var(--transition);
+            text-decoration: none;
+            color: var(--dark);
+        }
+
+        .project-item:hover {
+            background: rgba(67, 97, 238, 0.1);
+            transform: translateX(5px);
+        }
+
+        .delocraft .project-item:hover {
+            background: rgba(247, 37, 133, 0.1);
+        }
+
+        .nayeli .project-item:hover {
+            background: rgba(76, 201, 240, 0.1);
+        }
+
+        .mma .project-item:hover {
+            background: rgba(249, 199, 79, 0.1);
+        }
+
+        .project-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--light);
+            margin-right: 0.8rem;
+            color: var(--primary);
+            font-size: 1.2rem;
+        }
+
+        .delocraft .project-icon {
+            color: var(--accent);
+        }
+
+        .nayeli .project-icon {
+            color: var(--success);
+        }
+
+        .mma .project-icon {
+            color: var(--warning);
+        }
+
+        .project-title {
+            font-weight: 500;
+            flex: 1;
+        }
+
+        .badge {
+            background: var(--primary);
+            color: white;
+            padding: 0.2rem 0.5rem;
+            border-radius: 20px;
+            font-size: 0.7rem;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+
+        .delocraft .badge {
+            background: var(--accent);
+        }
+
+        .nayeli .badge {
+            background: var(--success);
+        }
+
+        .mma .badge {
+            background: var(--warning);
+            color: var(--dark);
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem 1rem;
+            margin-top: 2rem;
+            background: var(--dark);
+            color: var(--light);
+        }
+
+        .search-bar {
+            display: flex;
+            max-width: 600px;
+            margin: 2rem auto;
+            overflow: hidden;
+            border-radius: 30px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .search-input {
+            flex: 1;
+            padding: 1rem 1.5rem;
+            border: none;
+            font-size: 1rem;
+            font-family: inherit;
+            outline: none;
+        }
+
+        .search-btn {
+            padding: 0 1.5rem;
+            background: var(--accent);
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 1.2rem;
+            transition: var(--transition);
+        }
+
+        .search-btn:hover {
+            background: #e61980;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 2rem;
+            font-size: 2rem;
+            color: var(--dark);
+            position: relative;
+            padding-bottom: 0.5rem;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 4px;
+            background: var(--accent);
+            border-radius: 2px;
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2rem;
+            }
+
+            header p {
+                font-size: 1rem;
+            }
+
+            .project-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Estilos para la navegación */
+        nav {
+            background: white;
+            padding: 1rem;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary);
+            text-decoration: none;
+        }
+
+        .logo span {
+            color: var(--accent);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--dark);
+            font-weight: 500;
+            transition: var(--transition);
+        }
+
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+
+        .stats {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin: 3rem 0;
+            flex-wrap: wrap;
+        }
+
+        .stat-card {
+            background: white;
+            border-radius: 10px;
+            padding: 1.5rem;
+            text-align: center;
+            min-width: 200px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: var(--transition);
+        }
+
+        .stat-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-card:nth-child(2) .stat-number {
+            color: var(--accent);
+        }
+
+        .stat-card:nth-child(3) .stat-number {
+            color: var(--success);
+        }
+
+        .stat-card:nth-child(4) .stat-number {
+            color: var(--warning);
+        }
+
+        .stat-title {
+            color: var(--dark);
+            font-weight: 500;
+        }
+
+        /* Animaciones */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .project-category {
+            animation: fadeInUp 0.5s ease forwards;
+        }
+
+        .project-category:nth-child(1) {
+            animation-delay: 0.1s;
+        }
+
+        .project-category:nth-child(2) {
+            animation-delay: 0.2s;
+        }
+
+        .project-category:nth-child(3) {
+            animation-delay: 0.3s;
+        }
+
+        .project-category:nth-child(4) {
+            animation-delay: 0.4s;
+        }
+
+        /* Estilos para el botón de subir */
+        .back-to-top {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: var(--accent);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            font-size: 1.5rem;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            transition: var(--transition);
+            opacity: 0;
+            visibility: hidden;
+        }
+
+        .back-to-top.show {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .back-to-top:hover {
+            background: #e61980;
+            transform: translateY(-5px);
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <div class="nav-container">
+            <a href="#" class="logo">Feria<span>FP</span> 2425</a>
+            <div class="nav-links">
+                <a href="#proyectos">Proyectos</a>
+                <a href="#estadisticas">Estadísticas</a>
+                <a href="#contacto">Contacto</a>
+            </div>
+        </div>
+    </nav>
+
+    <header>
+        <div class="animated-bg">
+            <div style="width: 100px; height: 100px; top: 10%; left: 10%; animation: float 8s ease-in-out infinite;"></div>
+            <div style="width: 150px; height: 150px; top: 60%; left: 80%; animation: float 10s ease-in-out infinite;"></div>
+            <div style="width: 80px; height: 80px; top: 30%; left: 60%; animation: float 6s ease-in-out infinite;"></div>
+            <div style="width: 120px; height: 120px; top: 70%; left: 30%; animation: float 9s ease-in-out infinite;"></div>
+        </div>
+        <h1>Feria de Formación Profesional 2024-2025</h1>
+        <p>Explora los mejores proyectos desarrollados por nuestros alumnos de Formación Profesional</p>
+    </header>
+
+    <div class="container">
+        <div class="search-bar">
+            <input type="text" class="search-input" placeholder="Buscar proyectos..." id="searchInput">
+            <button class="search-btn"><i class="fas fa-search"></i></button>
+        </div>
+
+        <div class="stats" id="estadisticas">
+            <div class="stat-card">
+                <div class="stat-number">17</div>
+                <div class="stat-title">Proyectos</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">4</div>
+                <div class="stat-title">Categorías</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">2024</div>
+                <div class="stat-title">Año Académico</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">FP</div>
+                <div class="stat-title">Guadalajara</div>
+            </div>
+        </div>
+
+        <h2 class="section-title" id="proyectos">Explorar Proyectos</h2>
+
+        <div class="project-grid">
+            <!-- Categoría 1: Proyectos Clase -->
+            <div class="project-category">
+                <div class="category-header">
+                    <h3>Proyectos Clase</h3>
+                </div>
+                <div class="project-list">
+                    <a href="./archivos.html" class="project-item">
+                        <div class="project-icon">
+                            <i class="fas fa-folder"></i>
+                        </div>
+                        <div class="project-title">Archivos</div>
+                        <span class="badge">Docs</span>
+                    </a>
+                    <a href="./001_Snake/Produccion/snake.html" class="project-item">
+                        <div class="project-icon">
+                            <i class="fas fa-gamepad"></i>
+                        </div>
+                        <div class="project-title">Juego Serpiente</div>
+                        <span class="badge">Juego</span>
+                    </a>
+                    <a href="./002_3enraya/index.html" class="project-item">
+                        <div class="project-icon">
+                            <i class="fas fa-th"></i>
+                        </div>
+                        <div class="project-title">3 en Raya</div>
+                        <span class="badge">Juego</span>
+                    </a>
+                    <a href="./003_Memorion/index.html" class="project-item">
+                        <div class="project-icon">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                        <div class="project-title">Memorion</div>
+                        <span class="badge">Juego</span>
+                    </a>
+                    <a href="004_Baraja/baraja.html" class="project-item">
+                        <div class="project-icon">
+                            <i class="fas fa-cards"></i>
+                        </div>
+                        <div class="project-title">Baraja</div>
+                        <span class="badge">Juego</span>
+                    </a>
+                    <a href="005_canvas_rebote/salvapantallas.html" class="project-item">
+                        <div class="project-icon">
+                            <i class="fas fa-paint-brush"></i>
+                        </div>
+                        <div class="project-title">Canvas</div>
+                        <span class="badge">Gráficos</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Categoría 2: Proyectos Delocraft -->
+            <div class="project-category delocraft">
+                <div class="category-header">
+                    <h3>Proyectos Delocraft</h3>
+                </div>
+                <div class="project-list">
+                    <a href="./DWEC_ivan/hormigas/index.html" class="project-item">
+                        <div class="project-icon">
+                            <i class="fas fa-bug"></i>
+                        </div>
+                        <div class="project-title">Hormigas</div>
+                        <span class="badge">Simulación</span>
+                    </a>
+                    <a href="./DWEC_ivan/Puzle/index.html" class="project-item">
+                        <div class="project-icon">
+                            <i class="fas fa-puzzle-piece"></i>
+                        </div>
+                        <div class="project-title">Puzzle</div>
+                        <span class="badge">Juego</span>
+                    </a>
+                    <a href="./DWEC_ivan/API REST/index.html" class="project-item">
+                        <div class="project-icon">
+                            <i class="fas fa-server"></i>
+                        </div>
+                        <div class="project-title">Pokemon API Rest</div>
+                        <span class="badge">API</span>
+                    </a>
+                    <a href="./DWEC_ivan/todolist/index.html" class="project-item">
+                        <div class="project-icon">
+                            <i class="fas fa-check-square"></i>
+                        </div>
+                        <div class="project-title">TodoList</div>
+                        <span class="badge">Utilidad</span>
+                    </a>
+                    <a href="./DWEC_ivan/cuadradoAleatorio2/index.html" class="project-item">
+                        <div class="project-icon">
+                            <i class="fas fa-random"></i>
+                        </div>
+                        <div class="project-title">Fondo Pantalla</div>
+                        <span class="badge">Gráficos</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Categoría 3: Proyectos Nayeli -->
+            <div class="project-category nayeli">
+                <div class="category-header">
+                    <h3>Proyectos Nayeli & Dytro</h3>
+                </div>
+                <div class="project-list">
+                    <a href="./DWEC_nayeli/3enRaya/index.html" class="project-item">
+                        <div class="project-icon">
+                            <i class="fas fa-th"></i>
+                        </div>
+                        <div class="project-title">3 en Raya</div>
+                        <span class="badge">Juego</span>
+                    </a>
+                    <a href="./DWEC_nayeli/Mosquitos/index.html" class="project-item">
+                        <div class="project-icon">
+                            <i class="fas fa-bug"></i>
+                        </div>
+                        <div class="project-title">Mosquitos</div>
+                        <span class="badge">Juego</span>
+                    </a>
+                    <a href="./DWEC_Dytro_alvaro/cestaFruta/index.html" class="project-item">
+                        <div class="project-icon">
+                            <i class="fas fa-apple-alt"></i>
+                        </div>
+                        <div class="project-title">Cesta y Fruta</div>
+                        <span class="badge">Juego</span>
+                    </a>
+                    <a href="./DWEC_Noelia/piedrapapeltijera/PiedraPapelTijera.html" class="project-item">
+                        <div class="project-icon">
+                            <i class="fas fa-hand-scissors"></i>
+                        </div>
+                        <div class="project-title">Piedra Papel Tijera</div>
+                        <span class="badge">Juego</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Categoría 4: Proyectos MMA -->
+            <div class="project-category mma">
+                <div class="category-header">
+                    <h3>Proyectos MMA</h3>
+                </div>
+                <div class="project-list">
+                    <a href="./DWEC_hectorin/ProyectoHeli-main/index.html" class="project-item">
+                        <div class="project-icon">
+                            <i class="fas fa-dragon"></i>
+                        </div>
+                        <div class="project-title">Proto Dino Chrome</div>
+                        <span class="badge">Juego</span>
+                    </a>
+                    <a href="./DWEC_Noelia/Helicoptero/index.html" class="project-item">
+                        <div class="project-icon">
+                            <i class="fas fa-helicopter"></i>
+                        </div>
+                        <div class="project-title">Nave Luna</div>
+                        <span class="badge">Juego</span>
+                    </a>
+                    <a href="./DWEC_Noelia/Juego-Hormigas-main/index.html" class="project-item">
+                        <div class="project-icon">
+                            <i class="fas fa-bug"></i>
+                        </div>
+                        <div class="project-title">Hormigas Noe</div>
+                        <span class="badge">Simulación</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer id="contacto">
+        <div class="container">
+            <p>© 2025 Feria de Formación Profesional - Guadalajara</p>
+            <p>Creado por los alumnos y profesores del centro</p>
+        </div>
+    </footer>
+
+    <a href="#" class="back-to-top" id="backToTop">
+        <i class="fas fa-chevron-up"></i>
+    </a>
+
+    <script>
+        // Función para filtrar proyectos
+        document.getElementById('searchInput').addEventListener('keyup', function() {
+            const searchTerm = this.value.toLowerCase();
+            const projectItems = document.querySelectorAll('.project-item');
+            
+            projectItems.forEach(item => {
+                const title = item.querySelector('.project-title').textContent.toLowerCase();
+                if (title.includes(searchTerm)) {
+                    item.style.display = 'flex';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        });
+
+        // Botón para volver arriba
+        const backToTopButton = document.getElementById('backToTop');
+        
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTopButton.classList.add('show');
+            } else {
+                backToTopButton.classList.remove('show');
+            }
+        });
+        
+        backToTopButton.addEventListener('click', (e) => {
+            e.preventDefault();
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        // Animación para los círculos de fondo
+        document.addEventListener('DOMContentLoaded', function() {
+            const circles = document.querySelectorAll('.animated-bg div');
+            
+            // Función para animar los círculos
+            function animateCircles() {
+                circles.forEach(circle => {
+                    const randomX = Math.floor(Math.random() * 80);
+                    const randomY = Math.floor(Math.random() * 80);
+                    
+                    circle.style.transform = `translate(${randomX}px, ${randomY}px)`;
+                });
+            }
+            
+            // Animar los círculos en intervalo
+            setInterval(animateCircles, 3000);
+        });
+
+        // Solución para el icono de cartas que puede no existir en Font Awesome
+        document.addEventListener('DOMContentLoaded', function() {
+            const cardsIcon = document.querySelector('.fa-cards');
+            if (cardsIcon) {
+                cardsIcon.classList.remove('fa-cards');
+                cardsIcon.classList.add('fa-playing-card');
+            }
+            
+            // Si tampoco existe fa-playing-card, usar un icono alternativo
+            setTimeout(function() {
+                const playingCardIcon = document.querySelector('.fa-playing-card');
+                if (playingCardIcon && window.getComputedStyle(playingCardIcon, ':before').content === '') {
+                    playingCardIcon.classList.remove('fa-playing-card');
+                    playingCardIcon.classList.add('fa-clubs'); // Alternativa
+                }
+                
+                // Si tampoco existe fa-clubs, usar un icono genérico
+                setTimeout(function() {
+                    const clubsIcon = document.querySelector('.fa-clubs');
+                    if (clubsIcon && window.getComputedStyle(clubsIcon, ':before').content === '') {
+                        clubsIcon.classList.remove('fa-clubs');
+                        clubsIcon.classList.add('fa-square'); // Icono genérico que seguro existe
+                    }
+                }, 100);
+            }, 100);
+        });
+
+        // Animación de entrada de los elementos
+        document.addEventListener('DOMContentLoaded', function() {
+            const projectCategories = document.querySelectorAll('.project-category');
+            
+            projectCategories.forEach((category, index) => {
+                setTimeout(() => {
+                    category.style.opacity = '1';
+                    category.style.transform = 'translateY(0)';
+                }, index * 100);
+            });
+        });
+    </script>
+</body>
+
+</html>

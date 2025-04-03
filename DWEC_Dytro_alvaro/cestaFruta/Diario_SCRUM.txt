@@ -1,0 +1,53 @@
+Dia 1:
+    Naila:
+        -Generacion de imagenes
+        -Ajuste de imagen "cesta" delante de la imagen "fondo"
+
+    Alvaro:
+        -Creacion de archivos
+        -Creacion de repositorio
+        -Creacion de fondo provisional
+        -Ajuste de imagen "fondo"
+
+Dia 2:
+    Naila:
+        -Cambio de nombres a las imagenes
+    Alvaro:
+        -Programacion de movimiento de la cesta
+
+Dia 3:
+    Naila:
+        -Programacion de la caída de frutas
+
+    /*Objetivos Hoy*/
+        --Que aparezcan las frutas y que caigan, que cuando toquen la cesta desaparezcan.
+
+    Alvaro:
+        -Colisiones de ventana
+
+    /*Objetivos Hoy*/
+        --Ajustar correctamente Bordes de ventana
+        --Leyenda de controles
+
+Dia 4:
+    Naila:
+        -Programación de la caída de frutas aleatoriamente
+        -Desaparición de fruta al atraparla con la cesta
+        -Colisión con la imagen "piedra"
+
+    Alvaro:
+        -Ventana de inicio
+
+Dia 5:
+    Naila:
+
+
+    Alvaro:
+        -Colisiones de ventana corregidas
+
+Dia 6:
+    Naila:
+        -Corrección de colisión con la imagen "piedra"
+
+    Alvaro:
+        -Caida de frutas corregidas, ahora caen de 1 en 1

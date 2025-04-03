@@ -1,0 +1,141 @@
+html, body {
+    height: 98%;
+    margin: 0;
+}
+body {
+    background-image: url('fondo.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+#nave {
+    z-index: 3;
+    position: absolute;
+    bottom: 20%;
+    left: 5.5%;
+    width: 3.5%;
+    border: 2px solid rgba(255, 255, 255, 0);
+}
+#tierra {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 14%;
+    z-index: 2;
+    border: 2px solid rgba(255, 255, 255, 0);
+}
+#luna {
+    position: absolute;
+    right: 0;
+    top: 20%;
+    width: 10%;
+    z-index: 2;
+    border: 2px solid rgba(255, 255, 255, 0);
+}
+#asteroide1, #asteroide2, #asteroide3 {
+    position: absolute;
+}
+#asteroide1 {
+    width: 5%;
+    top: 50%;
+    left: 0;
+    border: 2px solid rgba(255, 255, 255, 0);
+}
+#asteroide2 {
+    width: 6%;
+    top: 0;
+    left: 50%;
+    border: 2px solid rgba(255, 255, 255, 0);
+}
+#asteroide3 {
+    width: 7%;
+    top: 0;
+    left: 0;
+    border: 2px solid rgba(255, 255, 255, 0);
+}
+.datos {
+    position: absolute;
+    right: 3%;
+    bottom: 0;
+    color: white;
+    z-index: 10;
+}
+
+.pantalla {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    color: white;
+    text-align: center;
+    z-index: 1000;
+}
+
+.parrafoPantalla, .parrafoVictoria, .parrafoDerrota {
+    margin-top: 0;
+    font-size: 3em;
+    color: rgb(238, 255, 0);
+    font-family: 'Press Start 2P', cursive;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    display: block;
+    z-index: 1001;
+    position: relative;
+}
+
+.parrafoVictoria {
+    color: rgb(0, 255, 0);
+}
+
+.parrafoDerrota {
+    color: rgb(255, 0, 0);
+}
+
+.iniciar, .reiniciar, .reiniciarDerrota {
+    margin-top: 20px;
+    padding: 15px 30px;
+    font-size: 1.2em;
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0);
+    color: rgb(238, 255, 0);
+    border: 2px solid rgb(238, 255, 0);
+    font-family: 'Press Start 2P', cursive;
+    text-transform: uppercase;
+    transition: background-color 0.3s, color 0.3s;
+    font-weight: bold;
+    border-radius: 20px;
+}
+
+.iniciar:hover {
+    background-color: rgb(238, 255, 0);
+    color: rgb(0, 0, 0);
+}
+
+.reiniciar {
+    color: rgb(0, 255, 0);
+    border: 2px solid rgb(0, 255, 0);
+}
+
+.reiniciarDerrota {
+    color: rgb(255, 0, 0);
+    border: 2px solid rgb(255, 0, 0);
+}
+
+.reiniciar:hover {
+    background-color: rgb(0, 255, 0);
+    color: rgb(0, 0, 0);
+}
+
+.reiniciarDerrota:hover {
+    background-color: rgb(255, 0, 0);
+    color: rgb(0, 0, 0);
+}
+
+.todo {
+    display: block;
+}

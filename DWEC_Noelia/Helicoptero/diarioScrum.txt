@@ -1,0 +1,127 @@
+Proyecto Nave
+
+- El programa consiste en una nave que despega en la tierra.
+- Su objetivo es llegar a la luna, y aterrizar de forma segura.
+- Hay meteoritos que si colisionan con la nave el programa finaliza.
+
+Dia 1:
+
+- Investigación para averiguar como usar github.
+- Creación del repositorio y vinculación con github desktop.
+
+- Creación de los 3 archivos.
+- Noelia ha creado la base para el HTML.
+- Iván ha creado la base para el js.
+
+Dia 2:
+
+-Iván ha hecho modificaciones en el js, html y css incluyendo:
+    -En js:
+        -Creación del objeto nave.
+        -Creación de las variable "gravedad", "X" e "Y".
+        -Función gravedad, que va restando constantemente al eje "Y", excepto si "Y" es 0 o menos.
+        -Función mostrarDatos que va mostrando las coordenadas de los ejes constantemente.
+        -Creación de la función "teclas", que detecta la tecla que pulsa el usuario.
+        -En la función "teclas" se utiliza un switch para alternar entre las teclas que pulsa el usuario.
+        -Casos para arriba, abajo, izquierda y derecha, caso default si la tecla pulsada no tiene función.
+        -Cada tecla activa un intervalo que se detiene a través de otra función con keyUp.
+        -Creación y implementación del multiplicador "Velocidad".
+
+    -Pequeñas modificaciones en el html y css para una mejor visibilidad de las coordenadas.
+
+-Noelia : 
+	-Ha agregado las imágenes de fondo, la nave y los 3 asteroides.
+	-En HTML:
+		-Ha realizado los cambios necesarios para poder añadir las imágenes que faltaban.
+	-En Css:
+		-Creación del css. 
+		-Ha puesto la imagen de fondo.
+		-Ha modificado los tamaños de todos los elementos.
+		-Ha situado la luna y la tierra en el lugar que les corresponden.
+	-En Photoshop:
+		-Ha retocado las fotos para que se ajustasen a lo que necesitábamos, dejándolas sin fondo y recortando lo que no nos interesaba.
+
+Dia 4:
+
+Objetivos realizados:
+    -Noelia ha hecho cambios en la posición de las imágenes del css
+    -Iván ha puesto bordes a todas las imágenes para determinar la "hitbox" temporalmente;
+
+Objetivos planeados:
+    -Tratar de mover los asteroides de determinada forma.
+    -Tratar de mover la nave con las teclas.
+
+Resultados finales:
+    -Iván ha hecho correcciones respecto a las colisiones de la nave al pulsar las teclas.
+    -Noelia ha conseguido mover 2 asteroides de distinta manera, uno que va de arriba-abajo y otro que va de derecha a izquierda.
+
+Dia 5:
+
+Objetivos planeados:
+    -Cambiar las imágenes de la nave según diversos comportamientos que realice la nave.
+    -Realizar los movimientos aleatorios del asteroide número 3.
+
+Resultados finales:
+    -Iván ha conseguido que la imagen de la nave cambie segun diversos eventos.
+    -Noelia ha conseguido realizar los movimientos aleatorios del asteroide 3, aunque faltan realizar unos cambios puesto que se 
+    desencuadra de la pantalla. También ha realizado
+     los cambios necesarios en las imágenes a través de photoshop de la tierra, la luna y el cohete para que cuadren mejor con la 
+     experiencia de usuario que esperamos.
+
+Dia 6:
+Objetivos planeados:
+	- Corregir los errores del asteroide3.
+    - Crear una colision entre la nave y la luna
+
+Resultados finales:
+	- Noelia ha conseguido corregir los dos errores que había con el asteroide 3, uno era que se salía de los límites de la pantalla 
+    y el otro que no chocaba con los límites de la pantalla. Ambos errores han quedado corregidos.
+    - Iván ha conseguido crear una colision entre la luna y la tierra
+
+Dia 7:
+Objetivos planeados:
+	- Tratar de hacer colisiones entre nave y luna.
+	- Tratar de hacer colisiones entre nave y asteroides.
+
+Resultados finales:
+	- Noelia ha cambiado las imágenes referentes a las explosiones y ha creado un código para la colisión entre la nave y el 
+    asteroide 1, pero no funciona de manera correcta.
+    - Iván ha conseguido crear una colision de choque y de victoria con la luna.
+    
+Día 8:
+Objetivos planeados:
+	- Corregir los errores del código referente a la colisión entre el asteroide 1 y la nave.
+    - Crear las colisiones de la nave con el asteroide 2 y 3.
+
+Resultados finales:
+    - Noelia sigue corriegiendo los errores entre la colisión de la nave y el asteroide 1.
+    - Iván ha conseguido terminar la colisión con la luna.
+
+Día 9: 
+Objetivos planeados:
+    - Corregir los errores de la colisión entre la nave y el asteroide 1.
+    - Crear las colisiones de los asteroides 2 y 3.
+    - Crear las pantallas de ganado o perdido.
+    - Corregir los errores de las imágenes.
+
+Resultados finales:
+    - Iván y Noelia han conseguido a base de diferentes pruebas hacer que funcione la colisión entre la nave y el asteroide 1 de 
+    manera totalmente correcta.
+    - Noelia ha creado las funciones para las colisiones entre la nave y los asteroides 2 y 3 a partir de la realizada para la colisión 
+    entre la nave y el asteroide 1.
+    -Iván ha creado las pantallas de perdido y ganado y las a implementado correctamente en el programa.
+
+Día 10:
+Objetivos planeados:
+	- Solucionar problema con el aterrizaje de la luna.
+	- Retocar las imágenes de las explosiones.
+	- Crear pantalla de inicio.
+    
+Resultados finales:
+	- Iván ha solucionado el problema que nos salía con el aterrizaje de la luna.
+	- Iván ha creado una pantalla de inicio que pone en funcionamiento el programa.
+	- Noelia ha retocado las imágenes de las explosiones para que tengan el mismo tamaño que los elementos a los que corresponden y para 
+    que el fondo no salga blanco.
+
+¡HEMOS DESPLEGADO NUESTRA APLICACIÓN EN NETLIFLY!👏👏👏👏
+	
