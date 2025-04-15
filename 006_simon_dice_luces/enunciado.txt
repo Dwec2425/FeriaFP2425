@@ -1,0 +1,7 @@
+Recrear el juego del simon de colores.
+
+Deseable, al acabar (perder) debes introducir tus iniciales, y te rankearas en el ranking que hay abajo
+
+Este ranking debe ser persistente en el localstorage
+
+la iluminacion de las teclas debe ser animada (css)
