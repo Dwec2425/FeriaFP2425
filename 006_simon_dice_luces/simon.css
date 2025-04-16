@@ -113,3 +113,16 @@ main{
     background-color:rgba(43, 255, 0, 0.411);
 
 }
+
+.destacar{
+    animation: destacar 1s;
+}
+
+@keyframes destacar {
+   /* 0%{ background-color: yellow;}
+    50%    { background-color: orange;}
+    100%{ background-color: yellow;}*/
+    0%{ font-size: normal;}
+    50%    { font-size: xx-large;}
+    100%{ font-size: normal;}
+}
