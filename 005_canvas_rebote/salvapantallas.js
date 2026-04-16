@@ -1,4 +1,4 @@
-const EQUIPO = 1 //escribe 1 para BARÇA 2 para Real Madrid y 0 para logo del IEs Juan García Valdemora
+const EQUIPO = 1 //escribe 1 para BARÇA, 2 para Real Madrid y 0 para logo del IEs Juan García Valdemora
 
 const DERECHA = 1;
 const IZQUIERDA = -1;
